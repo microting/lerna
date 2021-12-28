@@ -38,6 +38,7 @@ function resolveConfigPromise(presetPackageName, presetConfig) {
  * @param {import("..").ChangelogPresetConfig} [changelogPreset]
  * @param {string} [rootPath]
  */
+// eslint-disable-next-line default-param-last
 function getChangelogConfig(changelogPreset = "conventional-changelog-angular", rootPath) {
   const presetName = typeof changelogPreset === "string" ? changelogPreset : changelogPreset.name;
   const presetConfig = typeof changelogPreset === "object" ? changelogPreset : {};

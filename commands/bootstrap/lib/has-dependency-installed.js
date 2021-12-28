@@ -33,6 +33,7 @@ function hasDependencyInstalled(pkg, depName, needVersion) {
 function getInstalled(pkg) {
   return new Promise((resolve, reject) => {
     if (cache.has(pkg)) {
+      // eslint-disable-next-line no-promise-executor-return
       return resolve(cache.get(pkg));
     }
 

@@ -45,6 +45,7 @@ function flattenOptions(obj) {
  * @param {LibNpmPublishOptions & NpmPublishOptions} [options]
  * @param {import("@lerna/otplease").OneTimePasswordCache} [otpCache]
  */
+// eslint-disable-next-line default-param-last
 function npmPublish(pkg, tarFilePath, options = {}, otpCache) {
   const { dryRun, ...remainingOptions } = flattenOptions(options);
   const { scope } = npa(pkg.name);

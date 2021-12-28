@@ -33,6 +33,7 @@ function createGitHubClient() {
   return new Octokit(options);
 }
 
+// eslint-disable-next-line default-param-last
 function parseGitRepo(remote = "origin", opts) {
   log.silly("parseGitRepo");
 

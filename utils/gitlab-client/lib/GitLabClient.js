@@ -7,6 +7,7 @@ const log = require("npmlog");
 const fetch = require("node-fetch");
 
 class GitLabClient {
+  // eslint-disable-next-line default-param-last
   constructor(baseUrl = "https://gitlab.com/api/v4", token) {
     this.baseUrl = baseUrl;
     this.token = token;

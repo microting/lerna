@@ -41,6 +41,7 @@ function runTopologically(packages, runner, { concurrency, graphType, rejectCycl
 
     queueNextAvailablePackages();
 
+    // eslint-disable-next-line no-promise-executor-return
     return queue.onIdle().then(() => resolve(returnValues));
   });
 }

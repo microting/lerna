@@ -63,6 +63,7 @@ function getArgs(options, includeMergedTags) {
  * @param {boolean} [includeMergedTags]
  * @returns {Promise<DescribeRefFallbackResult|DescribeRefDetailedResult>}
  */
+// eslint-disable-next-line default-param-last
 function describeRef(options = {}, includeMergedTags) {
   const promise = childProcess.exec("git", getArgs(options, includeMergedTags), options);
 
@@ -80,6 +81,7 @@ function describeRef(options = {}, includeMergedTags) {
  * @param {DescribeRefOptions} [options]
  * @param {boolean} [includeMergedTags]
  */
+// eslint-disable-next-line default-param-last
 function describeRefSync(options = {}, includeMergedTags) {
   const stdout = childProcess.execSync("git", getArgs(options, includeMergedTags), options);
   const result = parse(stdout, options.cwd);

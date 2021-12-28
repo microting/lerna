@@ -21,6 +21,7 @@ class PackageGraph extends Map {
    *    excluding the devDependencies that would normally be included.
    * @param {boolean} [forceLocal] Force all local dependencies to be linked.
    */
+  // eslint-disable-next-line default-param-last
   constructor(packages, graphType = "allDependencies", forceLocal) {
     super(packages.map((pkg) => [pkg.name, new PackageGraphNode(pkg)]));
 
