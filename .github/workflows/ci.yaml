@@ -34,6 +34,7 @@ jobs:
       matrix:
         node: [ 14, 16 ]
         script: [ 'ci:test:unit', 'ci:test:integration' ]
+        subset: [ publish, non-publish ]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
