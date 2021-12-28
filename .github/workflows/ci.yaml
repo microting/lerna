@@ -22,7 +22,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: npm -g i npm@7
+      - run: npm -g i npm@8
       - run: npm ci
       - run: npm run ci:lint
 
@@ -49,7 +49,7 @@ jobs:
         run: |
           git config --global user.email test@example.com
           git config --global user.name "Tester McPerson"
-      - run: npm -g i npm@next-7
+      - run: npm -g i npm@next-8
       - run: npm ci
       - run: npm run ${{ matrix.script }}
 
@@ -82,7 +82,7 @@ jobs:
         run: |
           git config --global user.email test@example.com
           git config --global user.name "Tester McPerson"
-      - run: npm -g i npm@next-7
+      - run: npm -g i npm@next-8
       - run: npm ci
       - env:
           LERNA_CI_TYPE: ${{ matrix.subset }}
